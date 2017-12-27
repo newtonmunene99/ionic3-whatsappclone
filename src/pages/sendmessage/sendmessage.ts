@@ -26,6 +26,10 @@ export class SendmessagePage {
     });
   }
 
+  showProfile() {
+    this.navCtrl.push('ProfilePage');
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad SendmessagePage');
   }

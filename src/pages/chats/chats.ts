@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, PopoverController } from 'ionic-angular';
 import { HomepopPage } from '../homepop/homepop';
-import { MyApp } from "../../app/app.component";
-import { getComponent } from 'ionic-angular/navigation/nav-util';
 import { App } from 'ionic-angular/components/app/app';
+import { StatusBar } from '@ionic-native/status-bar';
 
 /**
  * Generated class for the ChatsPage page.
@@ -19,7 +18,9 @@ import { App } from 'ionic-angular/components/app/app';
 })
 export class ChatsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public pop: PopoverController, private app: App) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public pop: PopoverController, private app: App, private statusBar: StatusBar) {
+   // this.statusBar.overlaysWebView(false);
+    this.statusBar.backgroundColorByHexString('#075e54');
   }
 
   presentPopover(myEvent) {
@@ -37,5 +38,7 @@ export class ChatsPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ChatsPage');
   }
+
+  
 
 }
