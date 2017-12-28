@@ -8,4 +8,6 @@ This is a template for WhatsApp for user with ionic framework. It's just a templ
 
 #NOT COMPLETE
 
-Demo: https://newtonmunene99.github.io/ionic2-whatsappclone/
+[HERE IS A DEMO](https://newtonmunene99.github.io/ionic2-whatsappclone/)
+
+![alt text](https://newtonmunene99.github.io/ionic2-whatsappclone/demo/assets/imgs/1.png "Logo Title Text 1")
