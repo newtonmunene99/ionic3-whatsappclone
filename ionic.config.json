@@ -1,6 +1,6 @@
 {
-  "name": "whatsapp",
-  "app_id": "",
+  "name": "whatsup",
+  "app_id": "96b48836",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
