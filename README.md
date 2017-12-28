@@ -3,6 +3,7 @@ This is a template for WhatsApp for user with ionic framework. It's just a templ
 
 1.git clone this repo
 2.npm install
-3.ionic serve
+3.ionic doctor check
+4.ionic serve
 
 #NOT COMPLETE
