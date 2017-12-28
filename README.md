@@ -1,13 +1,17 @@
 # ionic2-whatsappclone
 This is a template for WhatsApp for user with ionic framework. It's just a template with no backend
 
-1.git clone this repo
+1. git clone this repo
 
-2.npm install
+2. cd into directory
 
-3.ionic doctor check
+3. run **npm install** in your terminal
 
-4.ionic serve
+4. run **ionic doctor check** in your terminal
+
+5. run **ionic serve** in your terminal
+
+6. [Check out the ionic framework website for official docs](https://ionicframework.com)
 
 # NOT COMPLETE
 
