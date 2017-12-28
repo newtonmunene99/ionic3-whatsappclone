@@ -7,3 +7,5 @@ This is a template for WhatsApp for user with ionic framework. It's just a templ
 4.ionic serve
 
 #NOT COMPLETE
+
+Demo: https://newtonmunene99.github.io/ionic2-whatsappclone/
