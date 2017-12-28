@@ -22,4 +22,9 @@ export class ContactsPage {
     console.log('ionViewDidLoad ContactsPage');
   }
 
+  initChat() {
+    this.navCtrl.push('SendmessagePage');
+    //this.app.getRootNav().push('SendmessagePage');
+  }
+
 }

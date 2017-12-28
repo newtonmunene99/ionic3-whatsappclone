@@ -35,6 +35,10 @@ export class ChatsPage {
     this.app.getRootNav().push('SendmessagePage');
   }
 
+  contacts() {
+    this.app.getRootNav().push('ContactsPage');
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad ChatsPage');
   }
