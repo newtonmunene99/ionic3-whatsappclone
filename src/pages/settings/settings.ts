@@ -22,4 +22,32 @@ export class SettingsPage {
     console.log('ionViewDidLoad SettingsPage');
   }
 
+  myProfile() {
+    this.navCtrl.push('MyprofilePage');
+  }
+
+  account() {
+    this.navCtrl.push('AccountPage');
+  }
+
+  chatSettings() {
+    this.navCtrl.push('ChatsettingsPage');
+  }
+
+  notifSettings() {
+    this.navCtrl.push('NotifsettingsPage');
+  }
+
+  dataSettings() {
+    this.navCtrl.push('DatasettingsPage');
+  }
+
+  contactSettings() {
+    this.navCtrl.push('ContactsettingsPage');
+  }
+
+  help() {
+    this.navCtrl.push('HelpPage');
+  }
+
 }

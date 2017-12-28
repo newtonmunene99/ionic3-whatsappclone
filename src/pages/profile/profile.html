@@ -6,8 +6,13 @@
 -->
 <ion-header [class.opaque]="showToolbar">
 
-  <ion-navbar>
+  <ion-navbar color="whatsapp">
     <ion-title [hidden]="!showToolbar">Finn</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="royal" (click)="presentPopover($event)">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>

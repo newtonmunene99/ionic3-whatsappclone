@@ -16,7 +16,7 @@
 <ion-content>
 
   <ion-list>
-    <ion-item>
+    <ion-item (click)="myProfile()">
       <ion-avatar item-start>
         <img src="../../assets/imgs/one.png">
       </ion-avatar>
@@ -24,32 +24,32 @@
       <p>Can't talk, WhatsApp only</p>
     </ion-item>
 
-    <ion-item>
+    <ion-item (click)="account()">
       <ion-icon color="whatsappalt" name="key" item-start></ion-icon>
       Account
     </ion-item>
 
-    <ion-item>
+    <ion-item (click)="chatSettings()">
       <ion-icon color="whatsappalt" name="md-text" item-start></ion-icon>
       Chats
     </ion-item>
 
-    <ion-item>
+    <ion-item (click)="notifSettings()">
       <ion-icon color="whatsappalt" name="notifications" item-start></ion-icon>
       Notifications
     </ion-item>
 
-    <ion-item>
+    <ion-item (click)="dataSettings()">
       <ion-icon color="whatsappalt" name="logo-whatsapp" item-start></ion-icon>
       Data and storage usage
     </ion-item>
 
-    <ion-item>
+    <ion-item (click)="contactSettings()">
       <ion-icon color="whatsappalt" name="people" item-start></ion-icon>
       Contacts
     </ion-item>
 
-    <ion-item>
+    <ion-item (click)="help()">
       <ion-icon color="whatsappalt" name="help-circle" item-start></ion-icon>
       Help
     </ion-item>

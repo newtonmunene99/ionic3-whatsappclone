@@ -1,5 +1,6 @@
 import { Component, ChangeDetectorRef } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, PopoverController } from 'ionic-angular';
+import { ProfilepopPage } from '../profilepop/profilepop';
 
 /**
  * Generated class for the ProfilePage page.
@@ -16,13 +17,20 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class ProfilePage {
   showToolbar: boolean = false;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public ref: ChangeDetectorRef) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public ref: ChangeDetectorRef, public pop: PopoverController) {
   }
 
   onScroll($event: any) {
     let scrollTop = $event.scrollTop;
     this.showToolbar = scrollTop >= 120;
     this.ref.detectChanges();
+  }
+
+  presentPopover(myEvent) {
+    let popover = this.pop.create(ProfilepopPage);
+    popover.present({
+      ev: myEvent
+    });
   }
 
   ionViewDidLoad() {
