@@ -13,7 +13,8 @@ This is a template for WhatsApp for user with ionic framework. It's just a templ
 
 6. [Check out the ionic framework website for official docs](https://ionicframework.com)
 
-# NOT COMPLETE
+# NOT COMPLETE.
+# CAMERA PAGE COMING SOON, ATTEMPTING BACKEND.
 
 > [HERE IS A DEMO: https://newtonmunene99.github.io/ionic2-whatsappclone/](https://newtonmunene99.github.io/ionic2-whatsappclone/)
 
