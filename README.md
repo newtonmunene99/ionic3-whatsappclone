@@ -1,4 +1,4 @@
-# ionic2-whatsappclone
+# ionic3-whatsappclone
 This is a template for WhatsApp for user with ionic framework. It's just a template with no backend
 
 1. git clone this repo

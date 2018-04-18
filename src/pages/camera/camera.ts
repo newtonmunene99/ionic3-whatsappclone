@@ -17,7 +17,7 @@ import { CameraPreview, CameraPreviewOptions } from '@ionic-native/camera-previe
 export class CameraPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private cameraPreview: CameraPreview) {
-    // camera options (Size and location). In the following example, the preview uses the rear camera and display the preview in the back of the webview
+    
     const cameraPreviewOpts: CameraPreviewOptions = {
       x: 0,
       y: 0,
@@ -26,13 +26,18 @@ export class CameraPage {
       camera: 'front',
       tapPhoto: false,
       tapToFocus: true,
-      previewDrag: true,
-      toBack: false,
-      alpha: 0
+      previewDrag: false,
+      toBack: true,
+      alpha: 1
     };
 
     // start camera
-    this.cameraPreview.startCamera(cameraPreviewOpts);
+    this.cameraPreview.startCamera(cameraPreviewOpts).then((res) => {
+      console.log(res)
+    },
+    (err) => {
+      console.error(err)
+    });
   }
 
   ionViewDidLoad() {
