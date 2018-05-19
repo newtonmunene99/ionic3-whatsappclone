@@ -1,20 +1,29 @@
 # ionic3-whatsappclone
+
 This is a template for WhatsApp for user with ionic framework. It's just a template with no backend
 
-1. git clone this repo
+1.  git clone this repo
 
-2. cd into directory
+2.  cd into directory
 
-3. run **npm install** in your terminal
+3.  run **npm install** in your terminal
 
-4. run **ionic doctor check** in your terminal
+4.  run **ionic doctor check** in your terminal
 
-5. run **ionic serve** in your terminal
+5.  run **ionic serve** in your terminal
 
-6. [Check out the ionic framework website for official docs](https://ionicframework.com)
+6.  [Check out the ionic framework website for official docs](https://ionicframework.com)
 
-# NOT COMPLETE.
-# CAMERA PAGE COMING SOON, ATTEMPTING BACKEND.
+### NOT COMPLETE.
+
+# ROADMAP
+
+1.  Camera Page
+2.  Firebase + Socket.IO
+3.  NodeJs Backend
+4.  Record and Send Voice Messages
+5.  Send and Recieve Messages
+6.  Send and Recieve Images
 
 > [HERE IS A DEMO: https://newtonmunene99.github.io/ionic2-whatsappclone/](https://newtonmunene99.github.io/ionic2-whatsappclone/)
 
