@@ -1,85 +1,63 @@
 page-sendmessage {
+  .item.head {
+    background-color: transparent;
+    padding-left: 0;
+    color: white;
+    font-size: 10px;
+  }
 
-    .item.head {
-        background-color: transparent;
-        padding-left: 0;
-        color: white;
-        font-size: 10px;
-    }
+  .item.head p {
+    color: white;
+    font-size: 10px;
+  }
 
-    .item.head p {
-        color: white;
-        font-size: 10px;
-    }
+  .item.item-block .item-inner {
+    border-bottom: none;
+  }
 
-    .item.item-block .item-inner {
-        border-bottom: none;
-    }
-
-    .item.footer {
-        border-radius: 30px;
-        background-color: white;
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-    }
-
-    .item.footer .button {
-        box-shadow: none;
-        -webkit-box-shadow: none;
-    }
-
-    ion-input, ion-textarea {
-       
-    }
-
-    .text-input {
-        margin: 13px 0px;
-    }
-
-.talk-bubble {
-	margin: 10px;
-    display: inline-block;
-    position: relative;
-	width: 200px;
-    height: auto;
-    box-shadow: 0 0 6px #B2B2B2;
+  .item.footer {
+    border-radius: 30px;
     background-color: white;
-    border-radius: 10px;
-}
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+      0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  }
 
-.talk-bubble.right {
-    margin-left: 90px;
+  .item.footer .button {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+
+  ion-input,
+  ion-textarea {
+  }
+
+  .text-input {
+    margin: 13px 0px;
+  }
+
+  .user_name {
+    color: #afafaf;
+  }
+  .message {
+    padding: 10px !important;
+    transition: all 250ms ease-in-out !important;
+    border-radius: 10px !important;
+    margin-bottom: 4px !important;
+  }
+  .my_message {
+    background: color($colors, primary) !important;
+    color: #000 !important;
+  }
+  .other_message {
+    background: #dcdcdc !important;
+    color: #000 !important;
+  }
+  .time {
+    color: #afafaf;
     float: right;
-    background-color: #dcf8c6;
-}
-
-.tri-right.left-top:after{
-	content: ' ';
-	position: absolute;
-	width: 0;
-	height: 0;
-    left: -20px;
-	right: auto;
-    top: 0px;
-	bottom: auto;
-    border: 22px solid;
-	border-color: white transparent transparent transparent;
-}
-
-.tri-right.left-top.right:after{
-    right: -20px;
-    left: auto;
-    border-color: #dcf8c6 transparent transparent transparent;
-}
-
-.talktext{
-    padding: 0.5em;
-	text-align: left;
-    line-height: 1.5em;
-}
-.talktext p{
-  /* remove webkit p margins */
-  -webkit-margin-before: 0em;
-  -webkit-margin-after: 0em;
-}
-
+    font-size: small;
+  }
+  .message_row {
+    background-color: #fff;
+  }
 }

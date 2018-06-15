@@ -1,6 +1,11 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { CameraPreview, CameraPreviewOptions } from '@ionic-native/camera-preview';
+import { Component } from "@angular/core";
+import { IonicPage, NavController, NavParams } from "ionic-angular";
+import {
+  CameraPreview,
+  CameraPreviewPictureOptions,
+  CameraPreviewOptions,
+  CameraPreviewDimensions
+} from "@ionic-native/camera-preview";
 
 /**
  * Generated class for the CameraPage page.
@@ -11,33 +16,37 @@ import { CameraPreview, CameraPreviewOptions } from '@ionic-native/camera-previe
 
 @IonicPage()
 @Component({
-  selector: 'page-camera',
-  templateUrl: 'camera.html',
+  selector: "page-camera",
+  templateUrl: "camera.html"
 })
 export class CameraPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams, private cameraPreview: CameraPreview) {
-    
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    private cameraPreview: CameraPreview
+  ) {
     const cameraPreviewOpts: CameraPreviewOptions = {
       x: 0,
       y: 0,
       width: window.screen.width,
       height: window.screen.height,
-      camera: 'front',
+      camera: "front",
       tapPhoto: false,
       tapToFocus: true,
       previewDrag: false,
-      toBack: true,
-      alpha: 1
+      toBack: true
     };
 
     // start camera
-    this.cameraPreview.startCamera(cameraPreviewOpts).then((res) => {
-      console.log(res)
-    },
-    (err) => {
-      console.error(err)
-    });
+    this.cameraPreview.startCamera(cameraPreviewOpts).then(
+      res => {
+        this.cameraPreview.setFocusMode("auto");
+        console.log(res);
+      },
+      err => {
+        console.error(err);
+      }
+    );
   }
 
   ionViewDidLoad() {
@@ -45,6 +54,6 @@ export class CameraPage {
   }
 
   ionViewDidLeave() {
-    
+    this.cameraPreview.stopCamera();
   }
 }

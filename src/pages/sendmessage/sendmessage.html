@@ -32,28 +32,21 @@
 
 
 <ion-content padding>
-  <div class="talk-bubble tri-right left-top right">
-    <div class="talktext">
-      <p>Talk to me</p>
-      <ion-note item-end>3:43 pm</ion-note>
-      <ion-icon item-end name="checkmark"></ion-icon>
-    </div>
-  </div>
+  <ion-grid>
+    <ion-row>
 
-  <div class="talk-bubble tri-right left-top left">
-    <div class="talktext">
-      <p>I'll tell you about it later. How was you day?</p>
-    </div>
-  </div>
+      <ion-col col-9 class="message other_message">
+        <span>Talk to me</span>
+        <div class="time">8:08am</div>
+      </ion-col>
 
-  <div class="talk-bubble tri-right left-top right">
-    <div class="talktext">
-      <p>I've had a pretty messed up day. If we just...</p>
-      <ion-note item-end>3:43 pm</ion-note>
-      <ion-icon item-end name="done-all"></ion-icon>
-    </div>
-  </div>
+      <ion-col offset-3 col-9 class="message my_message">
+        <span>I'll tell you about it later. How was you day?</span>
+        <div class="time">9:00am</div>
+      </ion-col>
 
+    </ion-row>
+  </ion-grid>
 </ion-content>
 
 <ion-footer ion-fixed>
@@ -70,7 +63,7 @@
         <ion-icon name="md-camera"></ion-icon>
       </button>
     </ion-item>
-    
+
     <ion-buttons end>
       <button ion-fab color="whatsapp">
         <ion-icon name="mic"></ion-icon>
