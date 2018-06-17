@@ -1,5 +1,7 @@
 # ionic3-whatsappclone
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/newtonmunene99/ionic2-whatsappclone.svg)](https://greenkeeper.io/)
+
 This is a template for WhatsApp for user with ionic framework. It's just a template with no backend
 
 1.  git clone this repo
