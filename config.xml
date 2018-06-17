@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.thebigzoo.whatsup" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.tmp.whatsup" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>whatsup</name>
-    <description>WhatsApp Ionic2 clone</description>
-    <author email="newtonnenz92@gmail.com" href="http://thebigzoo.co.ke/">The Big Zoo Team</author>
+    <description>WhatsApp Ionic3 clone</description>
+    <author email="newtonnenz92@gmail.com" href="https://github.com/newtonmunene99">Newton Munene</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -78,8 +78,6 @@
         <splash height="2732" src="resources/ios/splash/Default@2x~universal~anyany.png" width="2732" />
     </platform>
     <allow-navigation href="http://192.168.43.162:8100" />
-    <engine name="android" spec="6.3.0" />
-    <engine name="browser" spec="5.0.2" />
     <plugin name="ionic-plugin-keyboard" spec="^2.2.1" />
     <plugin name="cordova-plugin-whitelist" spec="^1.3.1" />
     <plugin name="cordova-plugin-device" spec="^1.1.4" />
@@ -87,4 +85,6 @@
     <plugin name="cordova-plugin-ionic-webview" spec="^1.1.16" />
     <plugin name="cordova-plugin-statusbar" spec="^2.4.0" />
     <plugin name="cordova-plugin-camera-preview" spec="^0.9.0" />
+    <engine name="android" spec="^7.1.0" />
+    <engine name="browser" spec="^5.0.3" />
 </widget>

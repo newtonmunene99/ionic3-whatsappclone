@@ -1,8 +1,8 @@
 page-camera {
-
-.ion-app, .ion-content {
-  background-color: transparent;
-}
-    
-
+  html,
+  body,
+  .ion-app,
+  .ion-content {
+    background-color: transparent;
+  }
 }
