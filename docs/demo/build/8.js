@@ -1,14 +1,14 @@
 webpackJsonp([8],{
 
-/***/ 285:
+/***/ 683:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DatasettingsPageModule", function() { return DatasettingsPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__datasettings__ = __webpack_require__(304);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__datasettings__ = __webpack_require__(702);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -38,13 +38,13 @@ var DatasettingsPageModule = (function () {
 
 /***/ }),
 
-/***/ 304:
+/***/ 702:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DatasettingsPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(37);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -72,7 +72,7 @@ var DatasettingsPage = (function () {
     };
     DatasettingsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-datasettings',template:/*ion-inline-start:"C:\Users\Munene\Documents\Ionic Projects\whatsapp\src\pages\datasettings\datasettings.html"*/'<!--\n  Generated template for the DatasettingsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="whatsapp">\n    <ion-title>Data and storage usage</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n  \n  <ion-list>  \n    <ion-item>\n      <ion-label>\n        Network usage\n      </ion-label>\n    </ion-item>\n  \n    <ion-item>\n      <ion-label>\n        Storage usage\n      </ion-label>\n    </ion-item>\n  </ion-list>\n  \n  <ion-list>\n    <ion-note item-start padding color="whatsappalt">\n      Media auto-download\n    </ion-note>\n    <ion-item>\n      <ion-label>\n        When using mobile data\n        <p>Photos</p>\n      </ion-label>\n    </ion-item>\n  \n    <ion-item>\n      <ion-label>\n        When connected on Wi-Fi\n        <p>All media</p>\n      </ion-label>\n    </ion-item>\n  \n    <ion-item>\n      <ion-label>\n        When roaming\n        <p>No media</p>\n      </ion-label>\n    </ion-item>\n  </ion-list>\n  \n  <ion-list>\n    <ion-note item-start padding color="whatsappalt">\n      Call settings\n    </ion-note>\n    <ion-item>\n      <ion-checkbox item-end color="whatsapp" checked="false"></ion-checkbox>\n      <ion-label>\n        Low data usage\n        <p>Lower the ammount of data used during a WhatsUp call</p>\n      </ion-label>\n    </ion-item>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\Munene\Documents\Ionic Projects\whatsapp\src\pages\datasettings\datasettings.html"*/,
+            selector: 'page-datasettings',template:/*ion-inline-start:"C:\Users\Munene\Projects\IonicProjects\ionic2-whatsappclone\src\pages\datasettings\datasettings.html"*/'<!--\n\n  Generated template for the DatasettingsPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="whatsapp">\n\n    <ion-title>Data and storage usage</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content>\n\n  \n\n  <ion-list>  \n\n    <ion-item>\n\n      <ion-label>\n\n        Network usage\n\n      </ion-label>\n\n    </ion-item>\n\n  \n\n    <ion-item>\n\n      <ion-label>\n\n        Storage usage\n\n      </ion-label>\n\n    </ion-item>\n\n  </ion-list>\n\n  \n\n  <ion-list>\n\n    <ion-note item-start padding color="whatsappalt">\n\n      Media auto-download\n\n    </ion-note>\n\n    <ion-item>\n\n      <ion-label>\n\n        When using mobile data\n\n        <p>Photos</p>\n\n      </ion-label>\n\n    </ion-item>\n\n  \n\n    <ion-item>\n\n      <ion-label>\n\n        When connected on Wi-Fi\n\n        <p>All media</p>\n\n      </ion-label>\n\n    </ion-item>\n\n  \n\n    <ion-item>\n\n      <ion-label>\n\n        When roaming\n\n        <p>No media</p>\n\n      </ion-label>\n\n    </ion-item>\n\n  </ion-list>\n\n  \n\n  <ion-list>\n\n    <ion-note item-start padding color="whatsappalt">\n\n      Call settings\n\n    </ion-note>\n\n    <ion-item>\n\n      <ion-checkbox item-end color="whatsapp" checked="false"></ion-checkbox>\n\n      <ion-label>\n\n        Low data usage\n\n        <p>Lower the ammount of data used during a WhatsUp call</p>\n\n      </ion-label>\n\n    </ion-item>\n\n  </ion-list>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Munene\Projects\IonicProjects\ionic2-whatsappclone\src\pages\datasettings\datasettings.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
     ], DatasettingsPage);

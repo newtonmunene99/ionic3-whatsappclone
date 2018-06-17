@@ -43408,8 +43408,11 @@ ion-navbar.toolbar {
   display: block;
 }
 
-page-camera ion-app, page-camera ion-content {
-  background-color: transparent !important;
+page-camera html,
+page-camera body,
+page-camera .ion-app,
+page-camera .ion-content {
+  background-color: transparent;
 }
 
 page-myprofile .item-md ion-avatar ion-img, page-myprofile .item-md ion-avatar img {
@@ -43488,51 +43491,34 @@ page-sendmessage .text-input {
   margin: 13px 0px;
 }
 
-page-sendmessage .talk-bubble {
-  margin: 10px;
-  display: inline-block;
-  position: relative;
-  width: 200px;
-  height: auto;
-  -webkit-box-shadow: 0 0 6px #B2B2B2;
-  box-shadow: 0 0 6px #B2B2B2;
-  background-color: white;
-  border-radius: 10px;
+page-sendmessage .user_name {
+  color: #afafaf;
 }
 
-page-sendmessage .talk-bubble.right {
-  margin-left: 90px;
+page-sendmessage .message {
+  padding: 10px !important;
+  -webkit-transition: all 250ms ease-in-out !important;
+  transition: all 250ms ease-in-out !important;
+  border-radius: 10px !important;
+  margin-bottom: 4px !important;
+}
+
+page-sendmessage .my_message {
+  background: #488aff !important;
+  color: #000 !important;
+}
+
+page-sendmessage .other_message {
+  background: #dcdcdc !important;
+  color: #000 !important;
+}
+
+page-sendmessage .time {
+  color: #afafaf;
   float: right;
-  background-color: #dcf8c6;
+  font-size: small;
 }
 
-page-sendmessage .tri-right.left-top:after {
-  content: ' ';
-  position: absolute;
-  width: 0;
-  height: 0;
-  left: -20px;
-  right: auto;
-  top: 0px;
-  bottom: auto;
-  border: 22px solid;
-  border-color: white transparent transparent transparent;
-}
-
-page-sendmessage .tri-right.left-top.right:after {
-  right: -20px;
-  left: auto;
-  border-color: #dcf8c6 transparent transparent transparent;
-}
-
-page-sendmessage .talktext {
-  padding: 0.5em;
-  text-align: left;
-  line-height: 1.5em;
-}
-
-page-sendmessage .talktext p {
-  /* remove webkit p margins */
-  -webkit-margin-before: 0em;
-  -webkit-margin-after: 0em;
+page-sendmessage .message_row {
+  background-color: #fff;
 }
