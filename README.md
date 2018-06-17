@@ -21,13 +21,13 @@ This is a template for WhatsApp for user with ionic framework. It's just a templ
 > [HERE IS A DEMO: https://newtonmunene99.github.io/ionic3-whatsappclone/](https://newtonmunene99.github.io/ionic3-whatsappclone/)
 
 <p align="center">
-    <img src="https://newtonmunene99.github.io/ionic3-whatsappclone/demo/assets/imgs/1.png" alt="">
-    <img src="https://newtonmunene99.github.io/ionic3-whatsappclone/demo/assets/imgs/2.png" alt="">
-    <img src="https://newtonmunene99.github.io/ionic3-whatsappclone/demo/assets/imgs/3.png" alt="">
-    <img src="https://newtonmunene99.github.io/ionic3-whatsappclone/demo/assets/imgs/4.png" alt="">
-    <img src="https://newtonmunene99.github.io/ionic3-whatsappclone/demo/assets/imgs/5.png" alt="">
-    <img src="https://newtonmunene99.github.io/ionic3-whatsappclone/demo/assets/imgs/6.png" alt="">
-    <img src="https://newtonmunene99.github.io/ionic3-whatsappclone/demo/assets/imgs/7.png" alt="">
+    <img width="100px" src="https://newtonmunene99.github.io/ionic3-whatsappclone/demo/assets/imgs/1.png" alt="">
+    <img width="100px" src="https://newtonmunene99.github.io/ionic3-whatsappclone/demo/assets/imgs/2.png" alt="">
+    <img width="100px" src="https://newtonmunene99.github.io/ionic3-whatsappclone/demo/assets/imgs/3.png" alt="">
+    <img width="100px" src="https://newtonmunene99.github.io/ionic3-whatsappclone/demo/assets/imgs/4.png" alt="">
+    <img width="100px" src="https://newtonmunene99.github.io/ionic3-whatsappclone/demo/assets/imgs/5.png" alt="">
+    <img width="100px" src="https://newtonmunene99.github.io/ionic3-whatsappclone/demo/assets/imgs/6.png" alt="">
+    <img width="100px" src="https://newtonmunene99.github.io/ionic3-whatsappclone/demo/assets/imgs/7.png" alt="">
 <p>
 
 # ROADMAP
