@@ -11,20 +11,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 @IonicPage()
 @Component({
   selector: 'page-tabs',
-  templateUrl: 'tabs.html',
+  templateUrl: 'tabs.html'
 })
 export class TabsPage {
+  tab1Root: string = 'CameraPage';
+  tab2Root: string = 'ChatsPage';
+  tab3Root: string = 'StatusPage';
+  tab4Root: string = 'CallsPage';
 
-  tab1Root: string = "CameraPage";
-  tab2Root: string = "ChatsPage";
-  tab3Root: string = "StatusPage";
-  tab4Root: string = "CallsPage";
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TabsPage');
   }
-
 }

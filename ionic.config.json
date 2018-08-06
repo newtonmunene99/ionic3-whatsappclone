@@ -1,8 +1,7 @@
 {
-  "name": "whatsup",
-  "app_id": "96b48836",
-  "type": "ionic-angular",
+  "name": "ionic3-whatsappclone",
   "integrations": {
     "cordova": {}
-  }
+  },
+  "type": "ionic-angular"
 }
