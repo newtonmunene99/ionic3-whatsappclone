@@ -9,6 +9,11 @@
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
     "lint": "ionic-app-scripts lint",
+<<<<<<< HEAD
+    "ionic:build": "ionic-app-scripts build",
+    "ionic:serve": "ionic-app-scripts serve",
+=======
+>>>>>>> master
     "snyk-protect": "snyk protect",
     "prepare": "npm run snyk-protect"
   },
@@ -46,7 +51,12 @@
     "rxjs": "5.5.11",
     "snyk": "^1.90.0",
     "sw-toolbox": "3.6.0",
+<<<<<<< HEAD
+    "zone.js": "^0.8.18",
+    "snyk": "^1.88.0"
+=======
     "zone.js": "0.8.26"
+>>>>>>> master
   },
   "devDependencies": {
     "@ionic/app-scripts": "3.1.11",
@@ -69,4 +79,8 @@
     ]
   },
   "snyk": true
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> master
