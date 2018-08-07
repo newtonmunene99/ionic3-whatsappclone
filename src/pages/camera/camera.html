@@ -20,19 +20,21 @@
 <ion-content padding>
 
   <div class="footer">
-    <div class="left">
-      <button ion-button icon-only round (click)="switchFlash()">
-        <ion-icon name="flash"></ion-icon>
+    <div class="left ">
+      <button class="noborder" ion-button icon-only round (click)="switchFlash()">
+        <ion-icon name="flash" *ngIf="currentFlashMode === 'on'"></ion-icon>
+        <ion-icon name="flash-off" *ngIf="currentFlashMode === 'off'|| !currentFlashMode"></ion-icon>
+        <ion-icon name="flashlight" *ngIf="currentFlashMode === 'torch'"></ion-icon>
+        <ion-icon name="swap" *ngIf="currentFlashMode === 'auto'"></ion-icon>
       </button>
     </div>
-    <div class="center">
-      <button ion-button icon-only round>
-        <ion-icon name="camera"></ion-icon>
-
+    <div class="center ">
+      <button class="withborder" ion-button icon-only round>
+        <ion-icon name="radio-button-off"></ion-icon>
       </button>
     </div>
-    <div class="right">
-      <button ion-button icon-only round (click)="switchCamera()">
+    <div class="right ">
+      <button class="noborder" ion-button icon-only round (click)="switchCamera()">
         <ion-icon name="reverse-camera"></ion-icon>
       </button>
     </div>

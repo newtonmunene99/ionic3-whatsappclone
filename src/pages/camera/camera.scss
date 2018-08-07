@@ -13,11 +13,17 @@ page-camera {
       background-color: transparent;
       width: 100%;
       .button {
-        height: 4.6rem;
-        width: 4.6rem;
-        border: solid 2px black;
+        height: 7rem;
+        width: 7rem;
         background-color: transparent;
-        color: black;
+        box-shadow: none;
+      }
+      .button.noborder {
+        color: white;
+      }
+      .button.withborder {
+        border: solid 3px white;
+        color: transparent;
       }
     }
   }
