@@ -7,15 +7,34 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>camera</ion-title>
+    <ion-buttons left>
+      <button ion-button icon-only (click)="takeMeBack()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  <button ion-button (click)="switchCamera()">
-    change CAMERA
-  </button>
 
+  <div class="footer">
+    <div class="left">
+      <button ion-button icon-only round (click)="switchFlash()">
+        <ion-icon name="flash"></ion-icon>
+      </button>
+    </div>
+    <div class="center">
+      <button ion-button icon-only round>
+        <ion-icon name="camera"></ion-icon>
+
+      </button>
+    </div>
+    <div class="right">
+      <button ion-button icon-only round (click)="switchCamera()">
+        <ion-icon name="reverse-camera"></ion-icon>
+      </button>
+    </div>
+  </div>
 </ion-content>

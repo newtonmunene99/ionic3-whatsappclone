@@ -18,6 +18,7 @@ import {
   templateUrl: 'camera.html'
 })
 export class CameraPage {
+  tabBarElement: any;
   picture: any;
   flashModes: Array<any> = [];
   focusModes: Array<any> = [];
@@ -34,14 +35,15 @@ export class CameraPage {
   };
   constructor(
     public navCtrl: NavController,
-    public navParams: NavParams,
-    private cameraPreview: CameraPreview
-  ) {}
+    public navParams: NavParams , private cameraPreview: CameraPreview
+  ) {
+    this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
+  }
   ionViewDidLoad() {
     // start camera
     this.cameraPreview.startCamera(this.cameraPreviewOpts).then(
       res => {
-        //this.cameraPreview.setFocusMode('auto');
+
         console.log(res);
       },
       err => {
@@ -49,15 +51,18 @@ export class CameraPage {
       }
     );
   }
+  ionViewWillEnter() {
+    this.tabBarElement.style.display = 'none';
+  }
 
-  ionViewDidEnter() {
+   ionViewDidEnter() {
     this.cameraPreview.show();
     this.switchFocus();
     this.getFocusModes();
     this.getFlashModes();
   }
 
-  switchCamera() {
+   switchCamera() {
     this.cameraPreview
       .switchCamera()
       .then(() => {
@@ -110,10 +115,16 @@ export class CameraPage {
         console.error(err);
       });
   }
-  ionViewWillLeave() {
-    this.cameraPreview.hide();
-  }
+
   ionViewWillUnload() {
     this.cameraPreview.stopCamera();
+  }
+  ionViewWillLeave() {
+    this.cameraPreview.hide();
+    this.tabBarElement.style.display = 'flex';
+  }
+  takeMeBack() {
+     this.navCtrl.parent.select(0);
+    // this.navCtrl.setRoot('TabsPage');
   }
 }

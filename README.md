@@ -32,8 +32,8 @@ This is a template for WhatsApp for user with ionic framework. It's just a templ
 
 # ROADMAP
 
-- [ ] Camera Page
-- [ ] Firebase + Socket.IO
+- [x] Camera Page
+- [ ] Camera Page Funcionality
 - [ ] NodeJs Backend
 - [ ] Record and Send Voice Messages
 - [ ] Send and Recieve Messages

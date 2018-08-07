@@ -24,20 +24,20 @@
 <ion-content>
 
   <ion-list>
-    <ion-item (click)="initChat()">
-      <ion-avatar item-start>
+    <ion-item>
+      <ion-avatar item-start (click)="showProfile()">
         <img src="../../assets/imgs/one.png">
       </ion-avatar>
-      <h2>Finn</h2>
+      <h2 (click)="initChat()">Finn</h2>
       <p>I've had a pretty messed up day. If we just...</p>
       <ion-note item-end>3:43 pm</ion-note>
     </ion-item>
 
-    <ion-item (click)="initChat()">
-      <ion-avatar item-start>
+    <ion-item>
+      <ion-avatar item-start (click)="showProfile()">
         <img src="../../assets/imgs/one.png">
       </ion-avatar>
-      <h2>Finn</h2>
+      <h2 (click)="initChat()">Finn</h2>
       <p>I've had a pretty messed up day. If we just...</p>
       <ion-note item-end>3:43 pm</ion-note>
     </ion-item>
