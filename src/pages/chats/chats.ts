@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, PopoverController } from 'ionic-angular';
+import {
+  IonicPage,
+  NavController,
+  NavParams,
+  PopoverController
+} from 'ionic-angular';
 import { HomepopPage } from '../homepop/homepop';
 import { App } from 'ionic-angular/components/app/app';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -14,12 +19,17 @@ import { StatusBar } from '@ionic-native/status-bar';
 @IonicPage()
 @Component({
   selector: 'page-chats',
-  templateUrl: 'chats.html',
+  templateUrl: 'chats.html'
 })
 export class ChatsPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams, public pop: PopoverController, private app: App, private statusBar: StatusBar) {
-   // this.statusBar.overlaysWebView(false);
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public pop: PopoverController,
+    private app: App,
+    private statusBar: StatusBar
+  ) {
+    // this.statusBar.overlaysWebView(false);
     this.statusBar.backgroundColorByHexString('#075e54');
   }
 
@@ -31,18 +41,17 @@ export class ChatsPage {
   }
 
   initChat() {
-    //this.navCtrl.push('SendmessagePage');
-    this.app.getRootNav().push('SendmessagePage');
+    this.navCtrl.push('SendmessagePage');
   }
 
   contacts() {
-    this.app.getRootNav().push('ContactsPage');
+    this.navCtrl.push('ContactsPage');
+  }
+  showProfile() {
+    this.navCtrl.push('ProfilePage');
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ChatsPage');
   }
-
-  
-
 }

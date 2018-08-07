@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, PopoverController } from 'ionic-angular';
+import {
+  IonicPage,
+  NavController,
+  NavParams,
+  PopoverController
+} from 'ionic-angular';
 import { ChatpopPage } from '../chatpop/chatpop';
 
 /**
@@ -12,12 +17,15 @@ import { ChatpopPage } from '../chatpop/chatpop';
 @IonicPage()
 @Component({
   selector: 'page-sendmessage',
-  templateUrl: 'sendmessage.html',
+  templateUrl: 'sendmessage.html'
 })
 export class SendmessagePage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams, public pop: PopoverController) {
-  }
+  newmessage: any;
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public pop: PopoverController
+  ) {}
 
   presentPopover(myEvent) {
     let popover = this.pop.create(ChatpopPage);
@@ -33,5 +41,4 @@ export class SendmessagePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad SendmessagePage');
   }
-
 }

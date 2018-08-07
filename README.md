@@ -1,7 +1,5 @@
 # ionic3-whatsappclone
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/newtonmunene99/ionic2-whatsappclone.svg)](https://greenkeeper.io/)
-
 This is a template for WhatsApp for user with ionic framework. It's just a template with no backend
 
 1.  git clone this repo
@@ -32,8 +30,9 @@ This is a template for WhatsApp for user with ionic framework. It's just a templ
 
 # ROADMAP
 
-- [ ] Camera Page
-- [ ] Firebase + Socket.IO
+- [x] Camera Page
+- Issue with Flash Icon. Will be fixed with release of ionic 4.
+- [ ] Camera Page Funcionality
 - [ ] NodeJs Backend
 - [ ] Record and Send Voice Messages
 - [ ] Send and Recieve Messages

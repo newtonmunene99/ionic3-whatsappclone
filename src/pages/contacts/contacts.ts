@@ -11,12 +11,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 @IonicPage()
 @Component({
   selector: 'page-contacts',
-  templateUrl: 'contacts.html',
+  templateUrl: 'contacts.html'
 })
 export class ContactsPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ContactsPage');
@@ -24,7 +22,5 @@ export class ContactsPage {
 
   initChat() {
     this.navCtrl.push('SendmessagePage');
-    //this.app.getRootNav().push('SendmessagePage');
   }
-
 }

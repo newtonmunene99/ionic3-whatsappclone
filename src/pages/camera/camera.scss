@@ -1,8 +1,46 @@
 page-camera {
-  html,
-  body,
-  .ion-app,
-  .ion-content {
-    background-color: transparent;
+  .scroll-content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 0 !important;
+    div.footer {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+      align-items: center;
+      background-color: transparent;
+      width: 100%;
+      .button {
+        height: 7rem;
+        width: 7rem;
+        background-color: transparent;
+        box-shadow: none;
+      }
+      .button.noborder {
+        color: white;
+      }
+      .button.withborder {
+        border: solid 3px white;
+        color: transparent;
+      }
+    }
   }
+  ion-header,
+  .toolbar-background {
+    //background-color: initial !important;
+    background-color: rgba(255, 255, 255, 0) !important;
+
+    &:after {
+      height: 0 !important;
+    }
+  }
+}
+html,
+body,
+ion-app,
+.ion-content,
+.content {
+  background-color: transparent;
 }
