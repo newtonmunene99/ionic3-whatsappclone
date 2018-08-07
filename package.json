@@ -8,7 +8,9 @@
     "start": "ionic-app-scripts serve",
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
-    "lint": "ionic-app-scripts lint"
+    "lint": "ionic-app-scripts lint",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "@angular/animations": "5.2.11",
@@ -43,7 +45,8 @@
     "pouchdb": "^7.0.0",
     "rxjs": "5.5.11",
     "sw-toolbox": "3.6.0",
-    "zone.js": "0.8.26"
+    "zone.js": "0.8.26",
+    "snyk": "^1.90.0"
   },
   "devDependencies": {
     "@ionic/app-scripts": "3.1.11",
@@ -64,5 +67,6 @@
       "android",
       "browser"
     ]
-  }
+  },
+  "snyk": true
 }
