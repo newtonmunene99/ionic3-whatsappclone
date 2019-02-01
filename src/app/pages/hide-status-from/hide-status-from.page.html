@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button
+        defaultHref="/settings/account/privacy/status-privacy"
+      ></ion-back-button>
+    </ion-buttons>
+    <ion-title>Hide status from</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+      <ion-button (click)="selectAll()">
+        <ion-icon slot="icon-only" name="done-all"></ion-icon> </ion-button
+    ></ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let contact of contacts">
+      <ion-avatar slot="start">
+        <ion-img [src]="contact.profilePicture"></ion-img>
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ contact.name }}</h2>
+      </ion-label>
+      <ion-radio
+        slot="end"
+        color="danger"
+        [checked]="contact.excluded"
+      ></ion-radio>
+    </ion-item>
+  </ion-list>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button
+      color="success"
+      [routerLink]="['/settings/account/privacy/status-privacy']"
+      routerDirection="back"
+    >
+      <ion-icon color="light" name="checkmark"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

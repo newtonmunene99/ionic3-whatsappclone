@@ -1,0 +1,24 @@
+<div class="profile-popover-wrapper">
+  <div class="header"><h3>Finn</h3></div>
+  <div class="body">
+    <img
+      src="../../../assets/images/one.png"
+      alt=""
+      (click)="click('profile-image')"
+    />
+  </div>
+  <div class="footer">
+    <ion-button shape="round" fill="clear" (click)="click('text')">
+      <ion-icon slot="icon-only" name="text"></ion-icon>
+    </ion-button>
+    <ion-button shape="round" fill="clear" (click)="click('call')">
+      <ion-icon slot="icon-only" name="call"></ion-icon>
+    </ion-button>
+    <ion-button shape="round" fill="clear" (click)="click('video-call')">
+      <ion-icon slot="icon-only" name="videocam"></ion-icon>
+    </ion-button>
+    <ion-button shape="round" fill="clear" (click)="click('profile')">
+      <ion-icon slot="icon-only" name="information-circle-outline"></ion-icon>
+    </ion-button>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/settings"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Account</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item
+      [routerLink]="['/settings/account/privacy']"
+      routerDirection="forward"
+    >
+      <ion-label> Privacy </ion-label>
+    </ion-item>
+    <ion-item
+      [routerLink]="['/settings/account/security']"
+      routerDirection="forward"
+    >
+      <ion-label> Security </ion-label>
+    </ion-item>
+    <ion-item
+      [routerLink]="['/settings/account/two-step-verification']"
+      routerDirection="forward"
+    >
+      <ion-label> Two-step verification </ion-label>
+    </ion-item>
+    <ion-item
+      [routerLink]="['/settings/account/change-number']"
+      routerDirection="forward"
+    >
+      <ion-label> Change Number </ion-label>
+    </ion-item>
+    <ion-item
+      [routerLink]="['/settings/account/request-account-info']"
+      routerDirection="forward"
+    >
+      <ion-label> Request account info </ion-label>
+    </ion-item>
+    <ion-item
+      [routerLink]="['/settings/account/delete-account']"
+      routerDirection="forward"
+    >
+      <ion-label> Delete my account </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

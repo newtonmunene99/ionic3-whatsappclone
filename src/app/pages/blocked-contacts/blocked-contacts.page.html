@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button
+        defaultHref="/settings/account/privacy"
+      ></ion-back-button>
+    </ion-buttons>
+    <ion-title>Blocked contacts</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="person-add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let contact of contacts">
+      <ion-avatar slot="start">
+        <ion-img [src]="contact.profilePicture"></ion-img>
+      </ion-avatar>
+      <ion-label
+        ><h3>{{ contact.name }}</h3>
+        <p>{{ contact.number }}</p></ion-label
+      >
+    </ion-item>
+  </ion-list>
+</ion-content>

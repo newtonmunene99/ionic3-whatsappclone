@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item [routerLink]="['/settings/my-profile']" routerDirection="forward">
+      <ion-avatar slot="start">
+        <ion-img src="../../../assets/images/one.png"></ion-img>
+      </ion-avatar>
+      <ion-label>
+        <h2>Finn 😎</h2>
+        <p>WhatsApp only.</p>
+      </ion-label>
+    </ion-item>
+    <ion-item [routerLink]="['/settings/account']" routerDirection="forward">
+      <ion-button slot="start" shape="round" fill="clear">
+        <ion-icon slot="icon-only" name="key" color="primary"></ion-icon>
+      </ion-button>
+      <ion-label> <h2>Account</h2> </ion-label>
+    </ion-item>
+    <ion-item
+      [routerLink]="['/settings/chats-settings']"
+      routerDirection="forward"
+    >
+      <ion-button slot="start" shape="round" fill="clear">
+        <ion-icon slot="icon-only" name="text" color="primary"></ion-icon>
+      </ion-button>
+      <ion-label> <h2>Chats</h2> </ion-label>
+    </ion-item>
+    <ion-item
+      [routerLink]="['/settings/notifications']"
+      routerDirection="forward"
+    >
+      <ion-button slot="start" shape="round" fill="clear">
+        <ion-icon
+          slot="icon-only"
+          name="notifications"
+          color="primary"
+        ></ion-icon>
+      </ion-button>
+      <ion-label> <h2>Notifications</h2> </ion-label>
+    </ion-item>
+    <ion-item
+      [routerLink]="['/settings/data-storage']"
+      routerDirection="forward"
+    >
+      <ion-button slot="start" shape="round" fill="clear">
+        <ion-icon
+          slot="icon-only"
+          name="cloud-download"
+          color="primary"
+        ></ion-icon>
+      </ion-button>
+      <ion-label> <h2>Data and storage usage</h2> </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-button slot="start" shape="round" fill="clear">
+        <ion-icon slot="icon-only" name="people" color="primary"></ion-icon>
+      </ion-button>
+      <ion-label> <h2>Invite a friend</h2> </ion-label>
+    </ion-item>
+    <ion-item [routerLink]="['/settings/help']" routerDirection="forward">
+      <ion-button slot="start" shape="round" fill="clear">
+        <ion-icon
+          slot="icon-only"
+          name="help-circle"
+          color="primary"
+        ></ion-icon>
+      </ion-button>
+      <ion-label> <h2>Help</h2> </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title
+      >Select contact <br /><small
+        >{{ contacts.length }} contacts</small
+      ></ion-title
+    >
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+
+      <ion-button (click)="presentOptionsPopover($event)">
+        <ion-icon slot="icon-only" name="more"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="none">
+    <ion-item>
+      <ion-button slot="start" shape="round" color="success">
+        <ion-icon slot="icon-only" name="people" color="light"></ion-icon>
+      </ion-button>
+      <ion-label> <h2>New group</h2> </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-button slot="start" shape="round" color="success">
+        <ion-icon slot="icon-only" name="person-add" color="light"></ion-icon>
+      </ion-button>
+      <ion-label> <h2>New Contact</h2> </ion-label>
+    </ion-item>
+    <ion-item *ngFor="let contact of contacts">
+      <ion-avatar slot="start" (click)="presentProfilePopover(contact.name)">
+        <ion-img [src]="contact.profilePicture"></ion-img>
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ contact.name }}</h2>
+        <p>{{ contact.status }}</p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-button slot="start" shape="round" color="success" fill="clear">
+        <ion-icon slot="icon-only" name="share" color="dark"></ion-icon>
+      </ion-button>
+      <ion-label> <h2>Invite friends</h2> </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-button slot="start" shape="round" color="success" fill="clear">
+        <ion-icon slot="icon-only" name="help-circle" color="dark"></ion-icon>
+      </ion-button>
+      <ion-label> <h2>Contacts help</h2> </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

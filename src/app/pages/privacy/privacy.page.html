@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/settings/account"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Privacy</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <ion-label color="success">Who can see my personal info</ion-label>
+    </ion-list-header>
+    <ion-item (click)="presentAlertRadio('lastseen')">
+      <ion-label>
+        <h2>Last seen</h2>
+        <p>{{ lastSeen }}</p>
+      </ion-label>
+    </ion-item>
+    <ion-item (click)="presentAlertRadio('profilephoto')">
+      <ion-label>
+        <h2>Profile photo</h2>
+        <p>{{ profilePhoto }}</p>
+      </ion-label>
+    </ion-item>
+    <ion-item (click)="presentAlertRadio('about')">
+      <ion-label>
+        <h2>About</h2>
+        <p>{{ about }}</p>
+      </ion-label>
+    </ion-item>
+    <ion-item
+      [routerLink]="['/settings/account/privacy/status-privacy']"
+      routerDirection="forward"
+    >
+      <ion-label>
+        <h2>Status</h2>
+        <p>Everyone</p>
+      </ion-label>
+    </ion-item>
+    <ion-item
+      [routerLink]="['/settings/account/privacy/live-location']"
+      routerDirection="forward"
+    >
+      <ion-label>
+        <h2>Live location</h2>
+        <p>Everyone</p>
+      </ion-label>
+    </ion-item>
+    <ion-item-divider color="medium">
+      <ion-text>
+        <p>
+          If you don't share your Last Seen, you won't be able to see other
+          people's Last Seen
+        </p>
+      </ion-text>
+    </ion-item-divider>
+    <ion-list-header>
+      <ion-label color="success">Messaging</ion-label>
+    </ion-list-header>
+    <ion-item
+      [routerLink]="['/settings/account/privacy/blocked-contacts']"
+      routerDirection="forward"
+    >
+      <ion-label>
+        <h2>Blocked contacts: None</h2>
+        <p>List of contacts that you have blocked</p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label> <h2>Read reciepts</h2> </ion-label>
+      <ion-checkbox color="primary" checked slot="end"></ion-checkbox>
+    </ion-item>
+    <ion-item-divider color="medium">
+      <ion-text>
+        <p>
+          If you turn of read receipts, you won't be able to see read receipts
+          from other people. Read receipts are always sent for group chats.
+        </p>
+      </ion-text>
+    </ion-item-divider>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,13 @@
+ion-text {
+  font-size: 14px;
+  display: flex;
+  flex-flow: column;
+  p {
+    font-size: 12px;
+  }
+}
+ion-button.security-lock {
+  height: 100px;
+  width: 100px;
+  margin: auto;
+}

@@ -1,0 +1,14 @@
+ion-back-button {
+  --icon-margin-end: 0;
+  --icon-padding-end: 0;
+  --margin-end: 0;
+  --padding-end: 0;
+}
+ion-list {
+  ion-item {
+    ion-button {
+      height: 40px;
+      width: 40px;
+    }
+  }
+}

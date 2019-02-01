@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button
+        defaultHref="/settings/account/privacy"
+      ></ion-back-button>
+    </ion-buttons>
+    <ion-title>Status privacy</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-radio-group>
+      <ion-list-header>
+        <ion-label color="success">Who can see your status updates</ion-label>
+      </ion-list-header>
+      <ion-item>
+        <ion-label>My Contacts</ion-label>
+        <ion-radio slot="start"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>My Contacts except..</ion-label>
+        <ion-radio slot="start" (ionSelect)="contactsExcept()"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Only share with..</ion-label>
+        <ion-radio slot="start" (ionSelect)="contactsChoosen()"></ion-radio>
+      </ion-item>
+      <ion-item-divider>
+        <ion-text>
+          <p>
+            Changes to your privacy settings won't affect status updates that
+            you've sent already
+          </p>
+        </ion-text>
+      </ion-item-divider>
+    </ion-radio-group>
+  </ion-list>
+</ion-content>

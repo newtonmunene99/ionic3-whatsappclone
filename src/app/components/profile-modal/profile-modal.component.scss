@@ -1,0 +1,20 @@
+div.profile-popover-wrapper {
+  width: 100%;
+  div.header {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    color: white;
+    font-weight: bold;
+  }
+  div.footer {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    ion-button {
+      --padding-start: 0;
+      --padding-end: 0;
+    }
+  }
+}

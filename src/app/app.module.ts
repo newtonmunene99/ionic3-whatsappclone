@@ -1,41 +1,43 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-import { SplashScreen } from '@ionic-native/splash-screen';
-import { StatusBar } from '@ionic-native/status-bar';
-import { CameraPreview } from '@ionic-native/camera-preview';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { RouteReuseStrategy } from "@angular/router";
 
-import { ChatpopPage } from '../pages/chatpop/chatpop';
-import { CallspopPage } from '../pages/callspop/callspop';
-import { HomepopPage } from '../pages/homepop/homepop';
-import { ProfilepopPage } from '../pages/profilepop/profilepop';
-import { StatuspopPage } from '../pages/statuspop/statuspop';
-import { MyApp } from './app.component';
+import { IonicModule, IonicRouteStrategy } from "@ionic/angular";
+import { SplashScreen } from "@ionic-native/splash-screen/ngx";
+import { StatusBar } from "@ionic-native/status-bar/ngx";
+import { CameraPreview } from "@ionic-native/camera-preview/ngx";
+
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { ChatsPopoverComponent } from "./components/chats-popover/chats-popover.component";
+import { StatusPopoverComponent } from "./components/status-popover/status-popover.component";
+import { CallsPopoverComponent } from "./components/calls-popover/calls-popover.component";
+import { ProfileModalComponent } from "./components/profile-modal/profile-modal.component";
+import { ContactsPopoverComponent } from "./components/contacts-popover/contacts-popover.component";
 
 @NgModule({
   declarations: [
-    MyApp,
-    ChatpopPage,
-    CallspopPage,
-    HomepopPage,
-    ProfilepopPage,
-    StatuspopPage
+    AppComponent,
+    ChatsPopoverComponent,
+    StatusPopoverComponent,
+    CallsPopoverComponent,
+    ProfileModalComponent,
+    ContactsPopoverComponent
   ],
-  imports: [BrowserModule, IonicModule.forRoot(MyApp)],
-  bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    ChatpopPage,
-    CallspopPage,
-    HomepopPage,
-    ProfilepopPage,
-    StatuspopPage
+    ChatsPopoverComponent,
+    StatusPopoverComponent,
+    CallsPopoverComponent,
+    ProfileModalComponent,
+    ContactsPopoverComponent
   ],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: ErrorHandler, useClass: IonicErrorHandler },
-    CameraPreview
-  ]
+    CameraPreview,
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}

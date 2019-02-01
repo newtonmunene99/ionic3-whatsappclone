@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/settings/account"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Security</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-text>
+        <ion-button
+          shape="round"
+          color="success"
+          size="large"
+          class="security-lock"
+        >
+          <ion-icon slot="icon-only" name="lock" color="light"></ion-icon>
+        </ion-button>
+        <p>
+          Your messages and calls are secured with end-to-end encryption, which
+          means WhatsApp and third parties can't read or listen to them.
+        </p>
+      </ion-text>
+    </ion-item>
+    <ion-list-header>
+      <ion-label color="success">Learn more about Whatsapp security</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-text>
+        <h6>Show security notifications</h6>
+        <p>
+          Turn on this setting to receive notifications when a contact's
+          security code has changed. Your messages and calls are encrypted
+          regardless of this setting.
+        </p>
+      </ion-text>
+      <ion-toggle slot="end"></ion-toggle>
+    </ion-item>
+  </ion-list>
+</ion-content>

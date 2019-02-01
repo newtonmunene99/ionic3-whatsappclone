@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>WhatsUp</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+
+      <ion-button (click)="presentPopover($event)">
+        <ion-icon slot="icon-only" name="more"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-tab-bar slot="top" color="primary">
+    <ion-tab-button tab="camera">
+      <ion-icon name="camera"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="chats"> <ion-label>CHATS</ion-label> </ion-tab-button>
+
+    <ion-tab-button tab="status">
+      <ion-label>STATUS</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="calls"> <ion-label>CALLS</ion-label> </ion-tab-button>
+  </ion-tab-bar>
+</ion-header>
+
+<ion-content padding> </ion-content>

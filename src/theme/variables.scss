@@ -1,76 +1,68 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/theming/
 
-// Font path is used to include ionicons,
-// roboto, and noto sans fonts
-$font-path: '../assets/fonts';
+/** Ionic CSS Variables **/
+:root {
+  --ion-color-primary: #128c7e;
+  --ion-color-primary-rgb: 18, 140, 126;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #107b6f;
+  --ion-color-primary-tint: #2a988b;
 
-// The app direction is used to include
-// rtl styles in your app. For more info, please see:
-// http://ionicframework.com/docs/theming/rtl-support/
-$app-direction: ltr;
+  --ion-color-secondary: #075e54;
+  --ion-color-secondary-rgb: 7, 94, 84;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-shade: #06534a;
+  --ion-color-secondary-tint: #206e65;
 
-@import 'ionic.globals';
+  --ion-color-tertiary: #dcf8c6;
+  --ion-color-tertiary-rgb: 220, 248, 198;
+  --ion-color-tertiary-contrast: #000000;
+  --ion-color-tertiary-contrast-rgb: 0, 0, 0;
+  --ion-color-tertiary-shade: #c2daae;
+  --ion-color-tertiary-tint: #e0f9cc;
 
-// Shared Variables
-// --------------------------------------------------
-// To customize the look and feel of this app, you can override
-// the Sass variables found in Ionic's source scss files.
-// To view all the possible Ionic variables, see:
-// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+  --ion-color-success: #25d366;
+  --ion-color-success-rgb: 37, 211, 102;
+  --ion-color-success-contrast: #000000;
+  --ion-color-success-contrast-rgb: 0, 0, 0;
+  --ion-color-success-shade: #21ba5a;
+  --ion-color-success-tint: #3bd775;
 
-// Named Color Variables
-// --------------------------------------------------
-// Named colors makes it easy to reuse colors on various components.
-// It's highly recommended to change the default colors
-// to match your app's branding. Ionic uses a Sass map of
-// colors so you can add, rename and remove colors as needed.
-// The "primary" color is the only required color in the map.
+  --ion-color-warning: #ffce00;
+  --ion-color-warning-rgb: 255, 206, 0;
+  --ion-color-warning-contrast: #ffffff;
+  --ion-color-warning-contrast-rgb: 255, 255, 255;
+  --ion-color-warning-shade: #e0b500;
+  --ion-color-warning-tint: #ffd31a;
 
-$colors: (
-  primary: #488aff,
-  secondary: #32db64,
-  danger: #f53d3d,
-  light: #f4f4f4,
-  dark: #222,
-  whatsapp: #075e54,
-  whatsappalt: #128c7e,
-  wapp-light: #25d366,
-  wapp-badge: #ece5dd,
-  whte: #ffffff,
-  wapp-chat: #dcf8c6
-);
+  --ion-color-danger: #f04141;
+  --ion-color-danger-rgb: 245, 61, 61;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #d33939;
+  --ion-color-danger-tint: #f25454;
 
-// App iOS Variables
-// --------------------------------------------------
-// iOS only Sass variables can go here
+  --ion-color-dark: #222428;
+  --ion-color-dark-rgb: 34, 34, 34;
+  --ion-color-dark-contrast: #ffffff;
+  --ion-color-dark-contrast-rgb: 255, 255, 255;
+  --ion-color-dark-shade: #1e2023;
+  --ion-color-dark-tint: #383a3e;
 
-// App Material Design Variables
-// --------------------------------------------------
-// Material Design only Sass variables can go here
+  --ion-color-medium: #ece5dd;
+  --ion-color-medium-rgb: 236, 229, 221;
+  --ion-color-medium-contrast: #000000;
+  --ion-color-medium-contrast-rgb: 0, 0, 0;
+  --ion-color-medium-shade: #d0cac2;
+  --ion-color-medium-tint: #eee8e0;
 
-// App Windows Variables
-// --------------------------------------------------
-// Windows only Sass variables can go here
-
-// App Theme
-// --------------------------------------------------
-// Ionic apps can have different themes applied, which can
-// then be future customized. This import comes last
-// so that the above variables are used and Ionic's
-// default are overridden.
-
-@import 'ionic.theme.default';
-
-// Ionicons
-// --------------------------------------------------
-// The premium icon font for Ionic. For more info, please see:
-// http://ionicframework.com/docs/ionicons/
-
-@import 'ionic.ionicons';
-
-// Fonts
-// --------------------------------------------------
-
-@import 'roboto';
-@import 'noto-sans';
+  --ion-color-light: #ffffff;
+  --ion-color-light-rgb: 255, 255, 255;
+  --ion-color-light-contrast: #000000;
+  --ion-color-light-contrast-rgb: 0, 0, 0;
+  --ion-color-light-shade: #e0e0e0;
+  --ion-color-light-tint: #ffffff;
+}

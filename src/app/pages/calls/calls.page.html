@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>WhatsUp</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+
+      <ion-button (click)="presentPopover($event)">
+        <ion-icon slot="icon-only" name="more"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-tab-bar slot="top" color="primary">
+    <ion-tab-button tab="camera" layout="label-hide">
+      <ion-icon name="camera"></ion-icon>
+    </ion-tab-button>
+
+    <ion-tab-button tab="chats"> <ion-label>CHATS</ion-label> </ion-tab-button>
+
+    <ion-tab-button tab="status">
+      <ion-label>STATUS</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="calls"> <ion-label>CALLS</ion-label> </ion-tab-button>
+  </ion-tab-bar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let call of calls">
+      <ion-avatar slot="start">
+        <ion-img src="../../../assets/images/one.png"></ion-img>
+      </ion-avatar>
+      <ion-label>
+        <h2>Finn</h2>
+        <small
+          ><span><ion-icon name="arrow-down" color="danger"></ion-icon></span>
+          Yesterday, 11:50 at night
+        </small>
+      </ion-label>
+
+      <ion-button slot="end" fill="clear" shape="round">
+        <ion-icon slot="icon-only" name="call"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="success">
+      <ion-icon color="light" name="call"></ion-icon>
+    </ion-fab-button> </ion-fab
+></ion-content>
