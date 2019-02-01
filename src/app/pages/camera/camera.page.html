@@ -1,9 +1,42 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>camera</ion-title>
-  </ion-toolbar>
+  <ion-toolbar> </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-
+  <div class="footer">
+    <div class="left ">
+      <ion-button class="noborder" (click)="switchFlash()" shape="round">
+        <ion-icon
+          slot="icon-only"
+          name="flash"
+          *ngIf="currentFlashMode === 'on'"
+        ></ion-icon>
+        <ion-icon
+          slot="icon-only"
+          name="flash-off"
+          *ngIf="currentFlashMode === 'off' || !currentFlashMode"
+        ></ion-icon>
+        <ion-icon
+          slot="icon-only"
+          name="flashlight"
+          *ngIf="currentFlashMode === 'torch'"
+        ></ion-icon>
+        <ion-icon
+          slot="icon-only"
+          name="swap"
+          *ngIf="currentFlashMode === 'auto'"
+        ></ion-icon>
+      </ion-button>
+    </div>
+    <div class="center ">
+      <ion-button class="withborder" shape="round">
+        <ion-icon slot="icon-only" name="radio-button-off"></ion-icon>
+      </ion-button>
+    </div>
+    <div class="right ">
+      <ion-button class="noborder" shape="round" (click)="switchCamera()">
+        <ion-icon slot="icon-only" name="reverse-camera"></ion-icon>
+      </ion-button>
+    </div>
+  </div>
 </ion-content>

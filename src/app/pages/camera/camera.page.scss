@@ -1,0 +1,46 @@
+page-camera {
+  .scroll-content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 0 !important;
+    div.footer {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+      align-items: center;
+      background-color: transparent;
+      width: 100%;
+      ion-button {
+        height: 7rem;
+        width: 7rem;
+        background-color: transparent;
+        box-shadow: none;
+      }
+      ion-button.noborder {
+        color: white;
+      }
+      ion-button.withborder {
+        border: solid 3px white;
+        color: transparent;
+      }
+    }
+  }
+  ion-header,
+  .toolbar-background {
+    //background-color: initial !important;
+    background-color: rgba(255, 255, 255, 0) !important;
+
+    &:after {
+      height: 0 !important;
+    }
+  }
+}
+html,
+body,
+ion-app,
+.ion-content,
+.content {
+  background-color: transparent;
+}

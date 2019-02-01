@@ -18,9 +18,9 @@ export class CameraPage implements OnInit {
     y: 0,
     width: window.screen.width,
     height: window.screen.height,
-    camera: "rear",
-    tapPhoto: true,
-    previewDrag: true,
+    camera: "front",
+    tapPhoto: false,
+    previewDrag: false,
     toBack: true,
     alpha: 1
   };
@@ -30,13 +30,28 @@ export class CameraPage implements OnInit {
     quality: 85
   };
   picture: any;
+  flashModes: Array<any> = [];
+  currentFlashMode: any;
+  focusModes: Array<any> = [];
   constructor(private cameraPreview: CameraPreview) {}
 
   ngOnInit() {
     // start camera
     this.cameraPreview.startCamera(this.cameraPreviewOpts).then(
-      res => {
-        console.log(res);
+      () => {
+        this.cameraPreview.show();
+        this.cameraPreview
+          .getFlashMode()
+          .then(mode => {
+            this.currentFlashMode = mode;
+            console.log(mode);
+          })
+          .catch(err => {
+            console.error(err);
+            this.currentFlashMode = "off";
+          });
+
+        this.getFlashModes();
       },
       err => {
         console.log(err);
@@ -57,10 +72,109 @@ export class CameraPage implements OnInit {
   }
 
   switchCamera() {
-    this.cameraPreview.switchCamera();
+    this.cameraPreview
+      .switchCamera()
+      .then(() => {
+        this.cameraPreview
+          .getFlashMode()
+          .then(mode => {
+            this.currentFlashMode = mode;
+          })
+          .catch(err => {
+            console.error(err);
+            this.currentFlashMode = "off";
+          });
+        this.getFlashModes();
+      })
+      .catch(err => {
+        console.error(err);
+      });
+  }
+
+  getFlashModes() {
+    this.cameraPreview
+      .getSupportedFlashModes()
+      .then(modes => {
+        console.log(modes);
+        this.flashModes = modes;
+      })
+      .catch(err => {
+        console.error(err);
+      });
+  }
+  switchFlash() {
+    this.cameraPreview
+      .getFlashMode()
+      .then(mode => {
+        if (
+          this.flashModes.indexOf(mode) === 0 &&
+          this.flashModes.length <= 1
+        ) {
+          this.cameraPreview.setFlashMode(mode).catch(err => {
+            console.error(err);
+          });
+          this.currentFlashMode = mode;
+        } else if (
+          this.flashModes.indexOf(mode) === 0 &&
+          this.flashModes.length >= 2
+        ) {
+          this.cameraPreview.setFlashMode(this.flashModes[1]).catch(err => {
+            console.error(err);
+          });
+          this.currentFlashMode = this.flashModes[1];
+        } else if (
+          this.flashModes.indexOf(mode) === 1 &&
+          this.flashModes.length >= 3
+        ) {
+          this.cameraPreview.setFlashMode(this.flashModes[2]).catch(err => {
+            console.error(err);
+          });
+          this.currentFlashMode = this.flashModes[2];
+        } else if (
+          this.flashModes.indexOf(mode) === 2 &&
+          this.flashModes.length >= 4
+        ) {
+          this.cameraPreview.setFlashMode(this.flashModes[3]).catch(err => {
+            console.error(err);
+          });
+          this.currentFlashMode = this.flashModes[3];
+        } else {
+          this.cameraPreview.setFlashMode(this.flashModes[0]).catch(err => {
+            console.error(err);
+          });
+          this.currentFlashMode = this.flashModes[0];
+        }
+      })
+      .catch(err => {
+        console.error(err);
+      });
+  }
+  switchFocus() {
+    this.cameraPreview
+      .getFocusMode()
+      .then(mode => {
+        console.log(mode);
+      })
+      .catch(err => {
+        console.error(err);
+      });
+  }
+  getFocusModes() {
+    this.cameraPreview
+      .getSupportedFocusModes()
+      .then(modes => {
+        console.log(modes);
+        this.focusModes = modes;
+      })
+      .catch(err => {
+        console.error(err);
+      });
   }
 
   ionViewWillLeave() {
+    this.cameraPreview.hide();
+  }
+  ionViewDidLeave() {
     this.cameraPreview.stopCamera();
   }
 }
