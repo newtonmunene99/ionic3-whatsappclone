@@ -1,7 +1,8 @@
 # ionic3-whatsappclone
 
 ### WIP NOT COMPLETE.
-### Support for Ionic 4 is in the works.
+
+### Support for Ionic 4 is in the works.Check v4 branch for updates/ to contribute.
 
 This is a template for WhatsApp for user with ionic framework. It's just a template with no backend
 
@@ -16,8 +17,6 @@ This is a template for WhatsApp for user with ionic framework. It's just a templ
 5.  run **ionic serve** in your terminal
 
 6.  [Check out the ionic framework website for official docs](https://ionicframework.com)
-
-
 
 > [HERE IS A DEMO: https://newtonmunene99.github.io/ionic3-whatsappclone/](https://newtonmunene99.github.io/ionic3-whatsappclone/)
 
