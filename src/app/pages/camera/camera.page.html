@@ -1,42 +1,64 @@
 <ion-header>
-  <ion-toolbar> </ion-toolbar>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button
+        defaultHref="/tabs/chats"
+        color="light"
+      ></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  <div class="footer">
-    <div class="left ">
-      <ion-button class="noborder" (click)="switchFlash()" shape="round">
-        <ion-icon
-          slot="icon-only"
-          name="flash"
-          *ngIf="currentFlashMode === 'on'"
-        ></ion-icon>
-        <ion-icon
-          slot="icon-only"
-          name="flash-off"
-          *ngIf="currentFlashMode === 'off' || !currentFlashMode"
-        ></ion-icon>
-        <ion-icon
-          slot="icon-only"
-          name="flashlight"
-          *ngIf="currentFlashMode === 'torch'"
-        ></ion-icon>
-        <ion-icon
-          slot="icon-only"
-          name="swap"
-          *ngIf="currentFlashMode === 'auto'"
-        ></ion-icon>
-      </ion-button>
-    </div>
-    <div class="center ">
-      <ion-button class="withborder" shape="round">
-        <ion-icon slot="icon-only" name="radio-button-off"></ion-icon>
-      </ion-button>
-    </div>
-    <div class="right ">
-      <ion-button class="noborder" shape="round" (click)="switchCamera()">
-        <ion-icon slot="icon-only" name="reverse-camera"></ion-icon>
-      </ion-button>
+<ion-content> </ion-content>
+<ion-footer translucent>
+  <div class="sub-footer">
+    <div class="controls">
+      <div class="left ">
+        <ion-button (click)="switchFlash()" shape="round" fill="clear">
+          <ion-icon
+            slot="icon-only"
+            name="flash"
+            *ngIf="currentFlashMode === 'on'"
+            color="light"
+          ></ion-icon>
+          <ion-icon
+            slot="icon-only"
+            name="flash-off"
+            *ngIf="currentFlashMode === 'off' || !currentFlashMode"
+            color="light"
+          ></ion-icon>
+          <ion-icon
+            slot="icon-only"
+            name="flashlight"
+            *ngIf="currentFlashMode === 'torch'"
+            color="light"
+          ></ion-icon>
+          <ion-icon
+            slot="icon-only"
+            name="swap"
+            *ngIf="currentFlashMode === 'auto'"
+            color="light"
+          ></ion-icon>
+        </ion-button>
+      </div>
+      <div class="center ">
+        <ion-button shape="round" fill="clear" (click)="takePhoto()">
+          <ion-icon
+            slot="icon-only"
+            name="radio-button-off"
+            color="light"
+          ></ion-icon>
+        </ion-button>
+      </div>
+      <div class="right ">
+        <ion-button shape="round" (click)="switchCamera()" fill="clear">
+          <ion-icon
+            slot="icon-only"
+            name="reverse-camera"
+            color="light"
+          ></ion-icon>
+        </ion-button>
+      </div>
     </div>
   </div>
-</ion-content>
+</ion-footer>

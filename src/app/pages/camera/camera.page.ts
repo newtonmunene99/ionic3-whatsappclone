@@ -2,9 +2,9 @@ import { Component, OnInit } from "@angular/core";
 import {
   CameraPreview,
   CameraPreviewPictureOptions,
-  CameraPreviewOptions,
-  CameraPreviewDimensions
+  CameraPreviewOptions
 } from "@ionic-native/camera-preview/ngx";
+import { PhotoLibrary } from "@ionic-native/photo-library/ngx";
 
 @Component({
   selector: "app-camera",
@@ -33,7 +33,11 @@ export class CameraPage implements OnInit {
   flashModes: Array<any> = [];
   currentFlashMode: any;
   focusModes: Array<any> = [];
-  constructor(private cameraPreview: CameraPreview) {}
+  libraryPictures: Array<any> = [];
+  constructor(
+    private cameraPreview: CameraPreview,
+    private photoLibrary: PhotoLibrary
+  ) {}
 
   ngOnInit() {
     // start camera
@@ -50,8 +54,8 @@ export class CameraPage implements OnInit {
             console.error(err);
             this.currentFlashMode = "off";
           });
-
         this.getFlashModes();
+        this.getLibraryPhotos();
       },
       err => {
         console.log(err);
@@ -69,6 +73,40 @@ export class CameraPage implements OnInit {
         this.picture = "../../../assets/images/one.png";
       }
     );
+  }
+
+  getLibraryPhotos() {
+    this.photoLibrary
+      .requestAuthorization()
+      .then(() => {
+        this.photoLibrary
+          .getLibrary({
+            itemsInChunk: 50,
+            maxItems: 100,
+            includeAlbumData: false
+          })
+          .subscribe(
+            library => {
+              library.map(libraryItem => {
+                this.libraryPictures.push(libraryItem);
+                console.log(libraryItem.id); // ID of the photo
+                console.log(libraryItem.photoURL); // Cross-platform access to photo
+                console.log(libraryItem.thumbnailURL); // Cross-platform access to thumbnail
+                console.log(libraryItem.fileName);
+                console.log(libraryItem.width);
+                console.log(libraryItem.height);
+                console.log(libraryItem.creationDate);
+                console.log(libraryItem.latitude);
+                console.log(libraryItem.longitude);
+                console.log(libraryItem.albumIds); // array of ids of appropriate AlbumItem, only of includeAlbumsData was used
+              });
+            },
+            err => {
+              console.log(err);
+            }
+          );
+      })
+      .catch(() => console.log("permissions weren't granted"));
   }
 
   switchCamera() {
