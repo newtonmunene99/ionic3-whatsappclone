@@ -1,9 +1,88 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>chat</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/chats"></ion-back-button>
+      <ion-button class="withavatar">
+        <ion-avatar slot="start">
+          <ion-img src="../../../assets/images/one.png"></ion-img>
+        </ion-avatar>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Finn</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="videocam"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="call"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="more"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content>
+  <div class="conversation">
+    <div class="conversation-container">
+      <div
+        class="message-container"
+        *ngFor="let message of messages; let i = index"
+      >
+        <div
+          *ngIf="message.sender === 'me'"
+          class="message sent"
+          [class.addition]="i > 0 ? messages[i - 1].sender === 'me' : null"
+        >
+          {{ message.message }}
+          <span class="metadata">
+            <span class="time">{{ message.time }}</span>
+            <span class="tick">
+              <ion-icon
+                *ngIf="message.recieved == true"
+                name="done-all"
+                [color]="message.seen == true ? 'read' : 'dark'"
+              ></ion-icon>
+              <ion-icon
+                *ngIf="message.recieved == false"
+                name="checkmark"
+                color="dark"
+              ></ion-icon>
+            </span>
+          </span>
+        </div>
+        <div
+          *ngIf="message.sender === 'you'"
+          class="message received"
+          [class.addition]="i > 0 ? messages[i - 1].sender === 'you' : null"
+        >
+          {{ message.message }}
+          <span class="metadata"><span class="time">8:34 am</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
 </ion-content>
+<ion-footer>
+  <ion-toolbar color="success">
+    <div class="sub-footer">
+      <div class="input-wrapper">
+        <ion-button shape="round" size="small" shape="round" fill="clear">
+          <ion-icon slot="icon-only" name="happy" color="dark"></ion-icon>
+        </ion-button>
+        <ion-textarea placeholder="Type a message"></ion-textarea>
+        <ion-button shape="round" size="small" shape="round" fill="clear">
+          <ion-icon slot="icon-only" name="attach" color="dark"></ion-icon>
+        </ion-button>
+        <ion-button shape="round" size="small" shape="round" fill="clear">
+          <ion-icon slot="icon-only" name="camera" color="dark"></ion-icon>
+        </ion-button>
+      </div>
+      <ion-button shape="round" color="primary">
+        <ion-icon slot="icon-only" name="mic" color="light"></ion-icon>
+      </ion-button>
+    </div>
+  </ion-toolbar>
+</ion-footer>
+<!-- CREDIT TO https://codepen.io/zenorocha/pen/eZxYOK?editors=1100 -->

@@ -13,6 +13,7 @@ import { StatusPopoverComponent } from "./components/status-popover/status-popov
 import { CallsPopoverComponent } from "./components/calls-popover/calls-popover.component";
 import { ProfileModalComponent } from "./components/profile-modal/profile-modal.component";
 import { ContactsPopoverComponent } from "./components/contacts-popover/contacts-popover.component";
+import { ChatPopoverComponent } from './components/chat-popover/chat-popover.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ContactsPopoverComponent } from "./components/contacts-popover/contacts
     StatusPopoverComponent,
     CallsPopoverComponent,
     ProfileModalComponent,
-    ContactsPopoverComponent
+    ContactsPopoverComponent,
+    ChatPopoverComponent
   ],
   entryComponents: [
     ChatsPopoverComponent,

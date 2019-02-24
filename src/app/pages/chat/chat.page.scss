@@ -1,0 +1,213 @@
+ion-back-button {
+  --margin-end: 0;
+  --padding-end: 0;
+  --padding-start: 0;
+  --icon-padding-end: 0;
+  --icon-padding-start: 0;
+  --icon-margin-end: 0;
+  --icon-margin-start: 0;
+  --min-width: 30px;
+}
+ion-button.withavatar {
+  --padding-start: 0;
+  --padding-end: 0;
+}
+ion-avatar {
+  width: 35px;
+  height: 35px;
+}
+.conversation {
+  height: 100%;
+  position: relative;
+  background: #efe7dd
+    url("https://cloud.githubusercontent.com/assets/398893/15136779/4e765036-1639-11e6-9201-67e728e86f39.jpg")
+    repeat;
+  z-index: 0;
+}
+
+.conversation ::-webkit-scrollbar {
+  transition: all 0.5s;
+  width: 5px;
+  height: 1px;
+  z-index: 10;
+}
+
+.conversation ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.conversation ::-webkit-scrollbar-thumb {
+  background: #b3ada7;
+}
+
+.conversation .conversation-container {
+  height: 100%;
+  //box-shadow: inset 0 10px 10px -10px #000000;
+  overflow-x: hidden;
+  padding: 0 16px;
+}
+
+.conversation .conversation-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.message {
+  color: #000;
+  clear: both;
+  line-height: 18px;
+  font-size: 15px;
+  padding: 8px;
+  position: relative;
+  margin: 12px 0 0 0;
+  max-width: 85%;
+  word-wrap: break-word;
+  z-index: -1;
+}
+
+.message:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.metadata {
+  display: inline-block;
+  float: right;
+  padding: 0 0 0 7px;
+  position: relative;
+  bottom: -4px;
+}
+
+.metadata .time {
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 11px;
+  display: inline-block;
+}
+
+.metadata .tick {
+  display: inline-block;
+  margin-left: 2px;
+  position: relative;
+  top: 4px;
+  height: 16px;
+  width: 16px;
+}
+
+.metadata .tick ion-icon {
+  position: absolute;
+  transition: 0.5s ease-in-out;
+}
+
+.metadata .tick ion-icon:first-child {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: perspective(800px) rotateY(180deg);
+  transform: perspective(800px) rotateY(180deg);
+}
+
+.metadata .tick ion-icon:last-child {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: perspective(800px) rotateY(0deg);
+  transform: perspective(800px) rotateY(0deg);
+}
+
+.metadata .tick-animation ion-icon:first-child {
+  -webkit-transform: perspective(800px) rotateY(0);
+  transform: perspective(800px) rotateY(0);
+}
+
+.metadata .tick-animation ion-icon:last-child {
+  -webkit-transform: perspective(800px) rotateY(-179.9deg);
+  transform: perspective(800px) rotateY(-179.9deg);
+}
+
+// .message:first-child {
+//   margin: 16px 0 8px;
+// }
+
+.message.received {
+  background: #fff;
+  border-radius: 0px 5px 5px 5px;
+  float: left;
+}
+
+.message.received .metadata {
+  padding: 0 0 0 16px;
+}
+
+.message.received:after {
+  border-width: 0px 10px 10px 0;
+  border-color: transparent #fff transparent transparent;
+  top: 0;
+  left: -10px;
+}
+
+.message.sent {
+  background: #e1ffc7;
+  border-radius: 5px 0px 5px 5px;
+  float: right;
+}
+
+.message.sent:after {
+  border-width: 0px 0 10px 10px;
+  border-color: transparent transparent transparent #e1ffc7;
+  top: 0;
+  right: -10px;
+}
+
+.message.addition {
+  margin-top: 2px;
+  border-radius: 5px;
+}
+
+.message.addition:after {
+  display: none;
+}
+
+ion-footer {
+  ion-toolbar {
+    div.sub-footer {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+
+      div.input-wrapper {
+        height: 96%;
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: flex-start;
+        background-color: var(--ion-color-light);
+        border-radius: 40px;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+        ion-button {
+          height: 40px;
+          width: 40px;
+          margin: 0;
+          --padding-start: 10px;
+          --padding-end: 10px;
+        }
+        ion-textarea {
+          width: 100%;
+          height: 45px;
+        }
+      }
+      ion-button {
+        height: 40px;
+        width: 40px;
+        margin: 0 5px;
+        --padding-start: 10px;
+        --padding-end: 10px;
+      }
+    }
+  }
+}

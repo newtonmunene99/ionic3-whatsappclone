@@ -3,11 +3,7 @@ import { PreloadAllModules, RouterModule, Routes } from "@angular/router";
 
 const routes: Routes = [
   { path: "", loadChildren: "./tabs/tabs.module#TabsPageModule" },
-  {
-    path: "contacts",
-    loadChildren: "./pages/contacts/contacts.module#ContactsPageModule"
-  },
-  { path: "chat", loadChildren: "./pages/chat/chat.module#ChatPageModule" },
+
   {
     path: "user-profile",
     loadChildren:
