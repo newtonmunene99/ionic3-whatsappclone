@@ -43,7 +43,7 @@
     "ionic-angular": "3.9.2",
     "ionic-image-loader": "^5.0.5",
     "ionicons": "^4.3.0",
-    "moment": "^2.22.2",
+    "moment": "^2.29.2",
     "pouchdb": "^7.0.0",
     "rxjs": "5.5.11",
     "snyk": "^1.90.0",
